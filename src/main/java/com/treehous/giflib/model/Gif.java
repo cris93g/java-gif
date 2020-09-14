@@ -3,15 +3,25 @@ import java.time.LocalDate;
 
 public class Gif {
     private String name;
+    private int categoryId;
     private LocalDate dateUploaded;
     private boolean favorite;
     private String username;
 
-    public Gif(String name, LocalDate dateUploaded, boolean favorite, String username) {
+    public Gif(String name, int categoryId,LocalDate dateUploaded, boolean favorite, String username) {
         this.name = name;
+        this.categoryId=categoryId;
         this.dateUploaded = dateUploaded;
         this.favorite = favorite;
         this.username = username;
+    }
+
+    public int getCategoryId() {
+        return categoryId;
+    }
+
+    public void setCategoryId(int categoryId) {
+        this.categoryId = categoryId;
     }
 
     public String getName() {
